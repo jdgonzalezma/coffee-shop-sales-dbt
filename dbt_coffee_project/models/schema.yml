@@ -1,0 +1,22 @@
+version: 2
+
+models:
+  - name: stg_coffee_sales
+    description: "Cleaned and casted transactional data from retail operations."
+    columns:
+      - name: transaction_id
+        description: "Primary key of the transaction."
+        tests:
+          - unique
+          - not_null
+
+  - name: fct_sales
+    description: "Fact table containing business metrics for coffee sales."
+    columns:
+      - name: transaction_id
+        tests:
+          - not_null
+      - name: quantity_sold
+        description: "The number of items sold in the transaction."
+        tests:
+          - not_null

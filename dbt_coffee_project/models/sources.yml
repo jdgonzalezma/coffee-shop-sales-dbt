@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: raw_coffee_data
+    description: "Raw transaction data from the coffee shop retail operations."
+    meta:
+      external_location: "/home/jdgonzalezma/workspace/coffee_shop_sales/data/coffee_sales.csv"
+    tables:
+      - name: raw_transactions
